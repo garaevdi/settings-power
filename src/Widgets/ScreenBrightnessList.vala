@@ -37,7 +37,9 @@ public class Power.ScreenBrightnessList : Granite.Box {
     private void populate_list () {
         list_box.remove_all ();
         for (int i = 0; i < brightness_manager.get_n_monitors (); i++) {
-            list_box.append (new ScreenBrightnessRow (i));
+            list_box.append (new ScreenBrightnessRow (i) {
+                focusable = false
+            });
         }
     }
 }

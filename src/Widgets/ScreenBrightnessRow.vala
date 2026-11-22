@@ -42,6 +42,7 @@ public class Power.ScreenBrightnessRow : Granite.ListItem {
         }
 
         var text_box = child;
+        text_box.focusable = false;
         child = null;
 
         brightness_slider = new Gtk.Scale.with_range (HORIZONTAL, 0, 1, 0.1) {
@@ -52,7 +53,9 @@ public class Power.ScreenBrightnessRow : Granite.ListItem {
             width_request = 175
         };
 
-        var box = new Granite.Box(HORIZONTAL, SINGLE);
+        var box = new Granite.Box (HORIZONTAL, SINGLE) {
+            focusable = false
+        };
         box.append (text_box);
         box.append (brightness_slider);
         child = box;
