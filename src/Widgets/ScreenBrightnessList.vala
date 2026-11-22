@@ -21,8 +21,7 @@ public class Power.ScreenBrightnessList : Granite.Box {
             selection_mode = Gtk.SelectionMode.NONE,
             show_separators = true
         };
-        list_box.add_css_class (Granite.STYLE_CLASS_RICH_LIST);
-        list_box.add_css_class (Granite.STYLE_CLASS_FRAME);
+        list_box.add_css_class (Granite.CssClass.CARD);
 
         var header = new Granite.HeaderLabel (_("Monitors brightness")) {
             mnemonic_widget = list_box
